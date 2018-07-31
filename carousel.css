@@ -34,10 +34,16 @@ body {
   height: 32rem;
 }
 
+/* Nuevas características */
 .carousel-menu {
   background-color: #3D6A9C;
 }
 
+.fuente {
+  font-size: 0.8em;
+  color: beige;
+  text-align: justify;
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
