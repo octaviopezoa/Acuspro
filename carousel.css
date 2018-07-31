@@ -42,7 +42,7 @@ body {
 .fuente {
   font-size: 0.8em;
   color: beige;
-  text-align: justify;
+  position: right;
 }
 
 /* MARKETING CONTENT
