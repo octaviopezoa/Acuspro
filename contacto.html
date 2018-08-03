@@ -24,7 +24,7 @@
 
     <!-- Menu cabecera -->
     <header>
-      <nav class="navbar navbar-expand-md carousel-menu fixed-top shadow p-3 mb-5 bg-white rounded">
+      <nav class="navbar navbar-expand-md  carousel-menu fixed-top shadow p-3 mb-5 bg-white rounded">
         
         <a class="navbar-brand" href="#"><img src="./images/corp/logo.png" width="200px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,10 +35,10 @@
             <li class="nav-item">
               <a class="nav-link font-weight-bold" href="index.html">Inicio</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="nosotros.html">Nosotros<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="productos.html">Productos</a>
             </li>
 
@@ -89,48 +89,50 @@
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
       <div class="container marketing">
-
         <!-- Four columns of text below the carousel -->
         <div class="row center">          
-
-          <div>
-            <h5 class="card-header card text-white bg-success mb-3">Nosotros</h5>
+          <div class="col-md-12">
+            <h5 class="card-header card text-white bg-success mb-3">Formulario de Contacto</h5>
             <div class="card-body">
-                <div class="row center"> 
-                  <div class="col-md-6 center">
-                    <p>
-                      Acús Pro es una empresa especializada en el desarrollo integral de proyectos en acústica y control de ruido. Está compuesta por varios consultores, ingenieros en acústica y sonido, con años de experiencia en trabajos exitosos para variados clientes, en distintos sectores del mercado, principalmente en áreas productivas, donde acústicos experimentados son claves al momento de realizar un proyecto exitoso.
-                      Nuestros servicios de ingeniería se orientan hacia áreas como la industria, arquitectura, construcción, consultoras ambientales, salud ocupacional, educación, retail y otras actividades económicas.</p>
-                    </p>
-                  </div>
-
-                  <div class="col-md-5 center">
-                    <img src="./images/nosotros-crop-u138324.jpg" width="100%">
-                  </div>
+              <div class="row text-center">
+                
+                <div class="col-md-6">
+                  <img src="./images/nosotros-crop-u138327.jpg" class="img-fluid img-thumbnail" alt="Responsive image">
+                  <p><br></p>
                 </div>
+
+                <div class="col-md-6">
+                  <form class="center" action="contacto.php" method="post">                
+                    <div class="form-group">
+                      <div class="">
+                          <input name="nombre" type="text" size="20" class="form-control" placeholder="Nombre" required>
+                      </div>
+              
+                      <div class="">
+                          <input name="email" type="email" size="20" class="form-control" placeholder="Correo Electrónico" required>
+                      </div>
+              
+                      <div class="">
+                          <input name="telefono" type="text" size="20" class="form-control" placeholder="Teléfono" required>
+                      </div>
+              
+                      <div class="">
+                          <input name="direccion" type="text" size="30"  class="form-control" placeholder="Dirección">
+                      </div>
+              
+                      <div class="">
+                          <textarea name="descrpcion" type="text" size="300" class="validate" placeholder="Descripción" required></textarea>
+                      </div>
+              
+                      <button class="waves-effect waves-light btn" type="submit" name="button" value="Enviar">Agregar</button>
+                    </div>
+                  </form>   
+                </div>
+
               </div>
-          </div>
-        </div>
-
-        <div class="row center">  
-
-          <div class="col-md-6">
-            <h5 class="card-header card text-white bg-success mb-3">Misión</h5>
-            <div class="card-body">
-              <p>Somos una empresa especializada en el desarrollo de proyectos e ingeniería acústica para el sector industrial, la construcción, la arquitectura y otros actores económicos. Entregamos un servicio y asesoría integral siendo un actor altamente competitivo para el beneficio de nuestros clientes y equipo de trabajo.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <h5 class="card-header card text-white bg-success mb-3">Visión</h5>
-            <div class="card-body">
-                <p>Trabajamos por un desarrollo permanente de nuestra organización, mejorando nuestro esquema y capacidad de trabajo, adaptándonos a los avances tecnológicos y cambios en nuestra especialidad, aspirando a ser lideres a nivel nacional en nuestra especialidad.</p>
             </div>
           </div>
         </div>
-
-
-
       </div><!-- /.container -->
 
 

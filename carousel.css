@@ -36,7 +36,7 @@ body {
 
 /* Nuevas características */
 .carousel-menu {
-  background-color: #3D6A9C;
+  background-color: white/* #3D6A9C*/;
 }
 
 .carousel-footer {
@@ -45,13 +45,29 @@ body {
 
 .fuente {
   font-size: 0.8em;
-  color: beige;
+  color: white;
+  position: right;
+}
+
+.email {
+  font-size: 0.8em;
+  color:  rgb(39, 82, 133);
   position: right;
 }
 
 .filtro {
   -webkit-filter: brightness(50%);
   filter: brightness(50%);
+}
+
+.nav-link {
+  color: rgb(39, 82, 133);
+  position: right;
+}
+
+
+.imagen:hover {
+  filter: opacity(.5);
 }
 
 /* MARKETING CONTENT
