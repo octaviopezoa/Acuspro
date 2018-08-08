@@ -52,7 +52,11 @@ body {
 .email {
   font-size: 0.8em;
   color:  rgb(39, 82, 133);
-  position: right;
+}
+
+.material-icons {
+  font-size: 0.8em;
+  vertical-align: middle;
 }
 
 .filtro {
