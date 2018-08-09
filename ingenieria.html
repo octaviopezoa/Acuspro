@@ -76,7 +76,7 @@
   <!-- FIN Optimización SEO Google -->
   
   <body>
-
+    <div itemscope itemtype="http://schema.org/Article">
 
     <!-- Menu cabecera -->
     <header>
@@ -150,7 +150,7 @@
         <div class="row center">          
 
           <div>
-            <h5 class="card-header card text-white bg-success mb-3">Ingeniería</h5>
+            <h5 itemprop="name" class="card-header card text-white bg-success mb-3">Ingeniería</h5>
             <div class="card-body">
               <p>
                 En Acús Pro desarrollamos ingeniería conceptual y de detalle de calidad, considerando el diseño de especificaciones técnicas, modelaciones computacionales, memorias de cálculo, mapas de ruido, estudios de propagación sonora, diseño de planos de espacios y recinto (planimetría) como de productos y montaje de soluciones.
@@ -163,7 +163,7 @@
         <div class="row center">  
 
           <div class="col-md-6">
-            <h5 class="card-header card text-white bg-success mb-3">servicios</h5>
+            <h5 itemprop="name" class="card-header card text-white bg-success mb-3">servicios</h5>
             <div class="card-body">
               <li>Ingeniería de control de ruido industrial.</li>
               <li>Diseño acústico de recintos arquitectónicos.</li>
@@ -178,7 +178,7 @@
           </div>
 
           <div class="col-md-6">
-            <h5 class="card-header card text-white bg-success mb-3">Recursos</h5>
+            <h5 itemprop="name" class="card-header card text-white bg-success mb-3">Recursos</h5>
             <div class="card-body">
               <li>Sonómetro integrador CESVA SC 260, certificado de acuerdo a a normativa vigente.</li>
               <li>Vibrómetro.</li>
@@ -199,27 +199,29 @@
 
 
       <!-- FOOTER -->
-      <footer class="container">
-        
-        <nav>
-          <div class="navbar navbar-expand-md carousel-footer bottom">
-            <div class="col-lg-4"><img src="images/corp/logoGris.png" width="95%"></div>
-            <div class="fuente col-lg-4">
-              <p>¿Por qué nosotros?</p>
-              <p>Nuestros servicios de ingeniería se orientan hacia áreas como la industria, arquitectura, construcción, consultoras ambientales, salud ocupacional, educación, retail y otras actividades económicas.</p>
+      <footer class="container">      
+          <nav>
+            <div itemscope itemtype="http://schema.org/Organization">
+              <div class="navbar navbar-expand-md carousel-footer bottom">
+                <div class="col-lg-4"><img itemprop="images" src="images/corp/logoGris.png" alt="Acuspro Acústica" width="95%"></div>
+                <div class="fuente col-lg-4">
+                  <p class="font-weight-bold">¿Por qué nosotros?</p>
+                  <p>Nuestros servicios de ingeniería se orientan hacia áreas como la industria, arquitectura, construcción, consultoras ambientales, salud ocupacional, educación, retail y otras actividades económicas.</p>
+                </div>
+                <div class="fuente col-lg-4">
+                  <p class="font-weight-bold">Contacto</p>
+                  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <p itemprop="streetAddress"><i class="material-icons">explore</i>Agustinas 1022, of. 530, Santiago</p>
+                  </div>
+                  <p itemprop="telephone"><i class="material-icons">phone_in_talk</i>+56232171743</p>
+                  <p itemprop="email"><i class="material-icons">email </i>proyectos@acuspro.cl</p>
+                </div>
+              </div>
             </div>
-            <div class="fuente col-lg-4">
-              <p>Contacto</p>
-              <p><i class="material-icons">explore</i>Agustinas 1022, of. 530, Santiago</p>
-              <p><i class="material-icons">phone_in_talk</i>+56232171743</p>
-              <p><i class="material-icons">email </i>proyectos@acuspro.cl</p>
-            </div>
-          </div>
-        </nav>
-
-        
-      </footer>
+          </nav>    
+        </footer>
     </main>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
