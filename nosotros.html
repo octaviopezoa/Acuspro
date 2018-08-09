@@ -76,6 +76,7 @@
   <!-- FIN Optimización SEO Google -->
   
   <body>
+  <div itemscope itemtype="http://schema.org/Article">
 
 
   <!-- Menu cabecera -->
@@ -150,7 +151,7 @@
         <div class="row center">          
 
           <div>
-            <h5 class="card-header card text-white bg-success mb-3">Nosotros</h5>
+            <h5 itemprop="name" class="card-header card text-white bg-success mb-3">Nosotros</h5>
             <div class="card-body">
                 <div class="row center"> 
                   <div class="col-md-6 center">
@@ -161,7 +162,7 @@
                   </div>
 
                   <div class="col-md-5 center">
-                    <img src="./images/nosotros-crop-u138324.jpg" width="100%">
+                    <img itemprop="image" src="./images/nosotros-crop-u138324.jpg" width="100%" alt="Acuspro Ingeniería Acústica Control de Ruido">
                   </div>
                 </div>
               </div>
@@ -171,14 +172,14 @@
         <div class="row center">  
 
           <div class="col-md-6">
-            <h5 class="card-header card text-white bg-success mb-3">Misión</h5>
+            <h5 itemprop="name" class="card-header card text-white bg-success mb-3">Misión</h5>
             <div class="card-body">
               <p>Somos una empresa especializada en el desarrollo de proyectos e ingeniería acústica para el sector industrial, la construcción, la arquitectura y otros actores económicos. Entregamos un servicio y asesoría integral siendo un actor altamente competitivo para el beneficio de nuestros clientes y equipo de trabajo.</p>
             </div>
           </div>
 
           <div class="col-md-6">
-            <h5 class="card-header card text-white bg-success mb-3">Visión</h5>
+            <h5 itemprop="name" class="card-header card text-white bg-success mb-3">Visión</h5>
             <div class="card-body">
                 <p>Trabajamos por un desarrollo permanente de nuestra organización, mejorando nuestro esquema y capacidad de trabajo, adaptándonos a los avances tecnológicos y cambios en nuestra especialidad, aspirando a ser lideres a nivel nacional en nuestra especialidad.</p>
             </div>
@@ -191,28 +192,29 @@
 
 
       <!-- FOOTER -->
-      <footer class="container">
-        
-        <nav>
-          <div class="navbar navbar-expand-md carousel-footer bottom">
-            <div class="col-lg-4"><img src="images/corp/logoGris.png" width="95%"></div>
-            <div class="fuente col-lg-4">
-              <p>¿Por qué nosotros?</p>
-              <p>Nuestros servicios de ingeniería se orientan hacia áreas como la industria, arquitectura, construcción, consultoras ambientales, salud ocupacional, educación, retail y otras actividades económicas.</p>
+      <footer class="container">      
+          <nav>
+            <div itemscope itemtype="http://schema.org/Organization">
+              <div class="navbar navbar-expand-md carousel-footer bottom">
+                <div class="col-lg-4"><img itemprop="images" src="images/corp/logoGris.png" alt="Acuspro Acústica" width="95%"></div>
+                <div class="fuente col-lg-4">
+                  <p class="font-weight-bold">¿Por qué nosotros?</p>
+                  <p>Nuestros servicios de ingeniería se orientan hacia áreas como la industria, arquitectura, construcción, consultoras ambientales, salud ocupacional, educación, retail y otras actividades económicas.</p>
+                </div>
+                <div class="fuente col-lg-4">
+                  <p class="font-weight-bold">Contacto</p>
+                  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <p itemprop="streetAddress"><i class="material-icons">explore</i>Agustinas 1022, of. 530, Santiago</p>
+                  </div>
+                  <p itemprop="telephone"><i class="material-icons">phone_in_talk</i>+56232171743</p>
+                  <p itemprop="email"><i class="material-icons">email </i>proyectos@acuspro.cl</p>
+                </div>
+              </div>
             </div>
-            <div class="fuente col-lg-4">
-              <p>Contacto</p>
-              <p><i class="material-icons">explore</i>Agustinas 1022, of. 530, Santiago</p>
-              <p><i class="material-icons">phone_in_talk</i>+56232171743</p>
-              <p><i class="material-icons">email </i>proyectos@acuspro.cl</p>
-            </div>
-          </div>
-        </nav>
-
-        
-      </footer>
+          </nav>    
+        </footer>
     </main>
-
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
