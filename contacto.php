@@ -1,30 +1,29 @@
 ﻿<?php
-$remitente = $_POST['email'];
-$destinatario = 'contacto@acuspro.cl'; // en esta línea va el mail del destinatario.
-$asunto = 'Contacto Sitio Web'; // acá se puede modificar el asunto del mail
-if (!$_POST){
-?>
+// Guardar los datos recibidos en variables:
+$nombre = $_POST['nombre'];
+$email = $_POST['email'];
+$telefono = $_POST['telefono'];
+$direccion = $_POST['direccion'];
+$mensaje = $_POST['mensaje'];
+// Definir el correo de destino:
+$dest = "contacto@acuspro.cl"; 
 
-<?php
-}else{
-	 
-    $cuerpo = "Nombre y apellido: " . $_POST["nombre"] . "\r\n"; 
-    $cuerpo .= "Email: " . $_POST["email"] . "\r\n";
-    $cuerpo .= "Telefono: " . $_POST["telefono"] . "\r\n";
-    $cuerpo .= "Dirección: " . $_POST["direccion"] . "\r\n";
-    $cuerpo .= "Descripción: " . $_POST["descripcion"] . "\r\n";    
-	//las líneas de arriba definen el contenido del mail. Las palabras que están dentro de $_POST[""] deben coincidir con el "name" de cada campo. 
-	// Si se agrega un campo al formulario, hay que agregarlo acá.
+// Estas son cabeceras que se usan para evitar que el correo llegue a SPAM:
+$headers = "From: $nombre <$email>\r\n";  
+$headers .= "X-Mailer: PHP5\n";
+$headers .= 'MIME-Version: 1.0' . "\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
-    $headers  = "MIME-Version: 1.0\n";
-    $headers .= "Content-type: text/plain; charset=utf-8\n";
-    $headers .= "X-Priority: 3\n";
-    $headers .= "X-MSMail-Priority: Normal\n";
-    $headers .= "X-Mailer: php\n";
-    $headers .= "From: \"".$_POST['nombre']." ".$_POST['apellido']."\" <".$remitente.">\n";
+// Aqui definimos el asunto y armamos el cuerpo del mensaje
+$asunto = "Contacto";
+$cuerpo = "Nombre: ".$nombre."<br>";
+$cuerpo .= "Email: ".$email."<br>";
+$cuerpo .= "Dirección: ".$direccion."<br>";
+$cuerpo .= "Telefono: ".$telefono."<br>";
+$cuerpo .= "Mensaje: ".$mensaje;
 
-    mail($destinatario, $asunto, $cuerpo, $headers);
-    
-    include 'confirma.html'; //se debe crear un html que confirma el envío
+// Esta es una pequena validación, que solo envie el correo si todas las variables tiene algo de contenido:
+if($nombre != '' && $email != '' && $telefono != '' && $mensaje != ''){
+ 	mail($dest,$asunto,$cuerpo,$headers); //ENVIAR!
 }
 ?>
