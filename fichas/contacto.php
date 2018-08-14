@@ -28,18 +28,6 @@ $cuerpo .= "Mensaje: ".$mensaje;
 	mail($dest,$asunto,$cuerpo,$headers); //ENVIAR!
 //}
 
-//header('location: exito.html');
+header('location: exito.html');
 
 ?>
-<<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-</head>
-<body>
-	<script>
-		window.location.href='exito.html';
-	</script>
-</body>
-</html>
