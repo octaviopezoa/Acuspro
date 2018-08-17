@@ -7,11 +7,10 @@ $direccion = $_POST['direccion'];
 $mensaje = $_POST['mensaje'];
 // Definir el correo de destino:
 $dest = "proyectos@acuspro.cl";
-$ccemail = "consultoracustico@gmail.com";
+//$ccemail = "consultoracustico@gmail.com";
 
 // Estas son cabeceras que se usan para evitar que el correo llegue a SPAM:
 $headers = "From: $nombre <$email>\r\n";  
-$headers .= "Cc: <$ccemail>\n";
 $headers .= "X-Mailer: PHP5\n";
 $headers .= 'MIME-Version: 1.0' . "\n";
 $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
@@ -25,9 +24,9 @@ $cuerpo .= "Telefono: ".$telefono."<br>";
 $cuerpo .= "Mensaje: ".$mensaje;
 
 // Esta es una pequena validación, que solo envie el correo si todas las variables tiene algo de contenido:
-//if($nombre != '' && $email != '' && $telefono != '' && $mensaje != ''){
+if($nombre != '' && $email != '' && $telefono != '' && $mensaje != ''){
 	mail($dest,$asunto,$cuerpo,$headers); //ENVIAR!
-//}
+}
 
 
 ?>

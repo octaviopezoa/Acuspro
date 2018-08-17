@@ -34,6 +34,32 @@ body {
   height: 32rem;
 }
 
+.nosotros {
+  height: 20rem; 
+  background-color: #fff; 
+  min-width: 30%;
+}
+
+/* Efecto de texto sobre imagen*/
+.div-imagen > div {
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+  padding:10px;
+  margin:0;
+}
+
+.desvanecer:hover {
+  opacity: 0.07;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  -ms-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+
 /* Nuevas características */
 .carousel-menu {
   background-color: white/* #3D6A9C*/;
@@ -72,6 +98,14 @@ body {
 
 .imagen:hover {
   filter: opacity(.5);
+}
+
+/*Imagen fija para scroll*/
+.imgfija {
+  background-image: url("./assets/fondo_descanso_1.jpg");
+  background-attachment: fixed;
+  background-size:90%;
+  color: #fff;
 }
 
 /* MARKETING CONTENT
